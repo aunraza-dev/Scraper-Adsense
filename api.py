@@ -107,13 +107,12 @@ async def search_keyword_in_meta(file: UploadFile = File(...), keyword: str = "a
         input_file = "URLsByOperators.csv"
         output_file = "found_urls.csv"
 
-        # Save uploaded file to disk
         with open(input_file, "wb") as f:
             f.write(file.file.read())
 
         with open(input_file, 'r') as csvfile:
             csvreader = csv.reader(csvfile)
-            next(csvreader, None)  # Skip the header if there is one
+            next(csvreader, None)
             found_urls = []
 
             for row in csvreader:
