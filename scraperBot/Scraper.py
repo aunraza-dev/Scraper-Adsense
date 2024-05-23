@@ -54,7 +54,7 @@ def find_keyword_in_meta(url: str, keyword: str) -> bool:
         print(f"Error occurred: {e}")
         return False
 
-@app.post("/search")
+@app.post("/scrapAndFilter")
 def search_urls(params: SearchParams):
     query = construct_query(params.tld, params.filetype, params.intitle, params.inurl, params.intext)
     meta_keyword = params.meta_keyword
