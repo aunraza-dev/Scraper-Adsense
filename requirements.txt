@@ -1,0 +1,6 @@
+fastapi
+pydantic
+googlesearch-python
+requests
+beautifulsoup4
+uvicorn
